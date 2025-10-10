@@ -438,12 +438,12 @@
   gap: 20px;
   align-self: start;
   font-family: "Poppins", sans-serif;
-
 }
 
 .project {
   margin-bottom: 10px;
 }
+
 #experience p{
   color: #888;
   font-weight: 600;
@@ -464,15 +464,19 @@
   position: relative;
   margin-left: 5%;
 }
+
 .project.expanded {
   width: 115%;
 }
+
 .project:hover{
   border-left-width: 15px;
 }
+
 .projectTitle{
   font-size: 1.3rem;
 }
+
 .voirDetailsbtn{
   color: #155973;
   background-color: transparent;
@@ -483,6 +487,7 @@
   font-size: 1rem;
   transition: color ease 0.3s, text-decoration 0.3s;
 }
+
 /* Smooth white -> blue-gradient text transition on hover */
 .projectDetails a {
   display: inline-block;
@@ -490,48 +495,41 @@
   text-decoration: none;
   padding: 2px 6px;
   border-radius: 6px;
-  color: #fff; /* fallback for browsers that don't support background-clip:text */
-  /* Two-layer background: first = gradient (will reveal), second = plain white (default) */
+  color: #fff;
   background-image:
     linear-gradient(90deg, #4f86a4, #6ca2c1, #316b88),
     linear-gradient(90deg, #ffffff, #ffffff);
   background-repeat: no-repeat, no-repeat;
-  /* Start with gradient hidden (0% width) and white fully visible */
   background-size: 0% 100%, 100% 100%;
   background-position: left center, left center;
-  /* show background through the text */
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent; /* Forces the text to use the background on WebKit */
-  /* Smooth animation of the gradient reveal */
+  -webkit-text-fill-color: transparent;
   transition: background-size 420ms ease, color 420ms ease;
 }
 
-/* On hover reveal the gradient (animate the first background's width) */
 .projectDetails a:hover {
   background-size: 100% 100%, 100% 100%;
-  /* for browsers that don't support background-clip:text this will still change color */
   color: transparent;
 }
 
-/* Optional: ensure focus accessibility */
 .projectDetails a:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(79,134,164,0.18);
 }
 
-
-
 .voirDetailsbtn:hover{
   color: #4f86a4;
   text-decoration: underline;
 }
+
 .societeName{
   margin-bottom: 10px;
   font-size: 1rem;
   color: #aaa;
   font-style: italic;
 }
+
 .projectDetails {
   display: block;
   margin-top: 10px;
@@ -547,11 +545,12 @@
   text-align: justify;
   font-family:"Poppins", sans-serif;
   font-size: 0.9rem;
-
 }
+
 .projectDetails ul li{
   margin-left: 10px;
 }
+
 .projectDetails ul li::before{
   content: "○";
   color: #316b88;
@@ -559,8 +558,8 @@
   margin-right: 10px; 
   font-size: 0.8rem;
   vertical-align: middle;
-
 }
+
 .projectDetails ul li ul li::before {
   content: "➤"; 
   color: #316b88; 
@@ -576,6 +575,169 @@
   transform: translateX(0); 
 }
 
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets and smaller laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .project {
+    width: 105%;
+    padding: 10px 15px;
+    margin-left: 3%;
+  }
+  
+  .project.expanded {
+    width: 108%;
+  }
+  
+  .projectTitle {
+    font-size: 1.2rem;
+  }
+  
+  .voirDetailsbtn {
+    font-size: 0.95rem;
+  }
+  
+  .projectDetails {
+    font-size: 0.85rem;
+    width: 95%;
+  }
+}
+
+/* Small tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .projects, .formations {
+    gap: 15px;
+  }
+  
+  .project {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 12px;
+  }
+  
+  .project.expanded {
+    width: 100%;
+  }
+  
+  .project:hover {
+    border-left-width: 10px;
+  }
+  
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+  
+  .societeName {
+    font-size: 0.9rem;
+  }
+  
+  .voirDetailsbtn {
+    margin: 15px -12px 0 5px;
+    font-size: 0.9rem;
+  }
+  
+  .projectDetails {
+    font-size: 0.8rem;
+    width: 96%;
+    padding: 8px;
+  }
+  
+  .projectDetails ul li {
+    margin-left: 5px;
+  }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .projects, .formations {
+    gap: 12px;
+  }
+  
+  #experience p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  .project {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px 10px;
+    min-height: 40px;
+  }
+  
+  .project.expanded {
+    width: 100%;
+  }
+  
+  .project:hover {
+    border-left-width: 8px;
+  }
+  
+  .projectTitle {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  
+  .societeName {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  
+  .voirDetailsbtn {
+    margin: 12px -10px 0 0;
+    font-size: 0.85rem;
+  }
+  
+  .projectDetails {
+    font-size: 0.75rem;
+    width: 98%;
+    padding: 6px;
+    text-align: left;
+  }
+  
+  .projectDetails ul li {
+    margin-left: 0;
+  }
+  
+  .projectDetails ul li::before {
+    margin-right: 6px;
+    font-size: 0.7rem;
+  }
+  
+  .projectDetails ul li ul li::before {
+    margin-right: 6px;
+    margin-left: 6px;
+    font-size: 0.7rem;
+  }
+  
+  .projectDetails a {
+    padding: 1px 4px;
+    font-size: 0.75rem;
+  }
+  
+  .project.expanded .projectDetails {
+    max-height: 600px;
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .projectTitle {
+    font-size: 0.95rem;
+  }
+  
+  .societeName {
+    font-size: 0.8rem;
+  }
+  
+  .voirDetailsbtn {
+    font-size: 0.8rem;
+  }
+  
+  .projectDetails {
+    font-size: 0.7rem;
+  }
+}
 
 .formations{
   margin-left: 10%;
@@ -593,19 +755,18 @@
   pointer-events: none;
 }
 
-
 .formations li.visible {
   opacity: 1;
   transform: translateX(0); 
   pointer-events: auto;
 }
+
 .formations li i{
   font-size: 1rem;
   margin-right: 10px;
   color: #6ca2c1;
   transition: color 0.2s ease;
 }
-
 
 .formations li:hover {
   color: #316b88;
@@ -616,7 +777,109 @@
   color: #316b88;
 }
 
+/* ========== RESPONSIVE BREAKPOINTS ========== */
 
+/* Tablets and smaller laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .formations {
+    margin-left: 8%;
+    margin-bottom: 4%;
+  }
+  
+  .formations li {
+    font-size: 1.05rem;
+  }
+  
+  .formations li i {
+    font-size: 0.95rem;
+    margin-right: 8px;
+  }
+}
+
+/* Small tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .formations {
+    margin-left: 5%;
+    margin-bottom: 4%;
+  }
+  
+  .formations li {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 15px;
+    transform: translateX(-60%);
+  }
+  
+  .formations li.visible {
+    transform: translateX(0);
+  }
+  
+  .formations li i {
+    font-size: 0.9rem;
+    margin-right: 8px;
+  }
+  
+  .formations li:hover {
+    transform: translateX(8px);
+  }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .formations {
+    margin-left: 2%;
+    margin-bottom: 5%;
+  }
+  
+  .formations li {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transform: translateX(-50%);
+  }
+  
+  .formations li.visible {
+    transform: translateX(0);
+  }
+  
+  .formations li i {
+    font-size: 0.85rem;
+    margin-right: 6px;
+  }
+  
+  .formations li:hover {
+    transform: translateX(5px);
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .formations {
+    margin-left: 0;
+    margin-bottom: 5%;
+  }
+  
+  .formations li {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    transform: translateX(-30%);
+  }
+  
+  .formations li.visible {
+    transform: translateX(0);
+  }
+  
+  .formations li i {
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+  
+  .formations li:hover {
+    transform: translateX(3px);
+  }
+}
 
 .skills, .languages, .interests {
   list-style: none;
@@ -694,8 +957,8 @@
   animation: gradientShift 2.5s linear infinite;
   transition: width 0.5s ease; 
 }
-skillLevel.high {
-  background: linear-gradient(to right, #30a460, #7bcc9c, #176839, #104226, #35cc74); /* green gradient */
+.skillLevel.high {
+  background: linear-gradient(to right, #30a460, #7bcc9c, #25a85c, #1b683c, #35cc74); /* green gradient */
 }
 
 
@@ -1107,9 +1370,160 @@ hr{
   font-weight: 600;
   color: #fff;
 }
+
 .level-badge.native { background: #27ae60; }
 .level-badge.fluent { background: #2980b9; }
 .level-badge.intermediate { background: #e67e22; }
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets and smaller laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .languagesContainer {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .languageCard {
+    padding: 1.5rem;
+  }
+  
+  .flag {
+    width: 70px;
+    height: 52px;
+  }
+  
+  .language-name {
+    font-size: 1.1rem;
+  }
+  
+  .progress-circle {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Small tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .languagesContainer {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .languageCard {
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+  
+  .languageCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .flag {
+    width: 60px;
+    height: 45px;
+    border-radius: 8px;
+  }
+  
+  .language-name {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .progress-percentage {
+    font-size: 0.9rem;
+  }
+  
+  .level-badge {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .languagesContainer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+  
+  .languageCard {
+    padding: 1.5rem;
+    border-radius: 16px;
+    max-width: 100%;
+  }
+  
+  .languageCard:hover {
+    transform: translateY(-4px);
+  }
+  
+  .flag {
+    width: 70px;
+    height: 52px;
+  }
+  
+  .language-name {
+    font-size: 1.1rem;
+  }
+  
+  .progress-circle {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .progress-percentage {
+    font-size: 0.95rem;
+  }
+  
+  .level-badge {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .languagesContainer {
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .languageCard {
+    padding: 1.2rem;
+    border-radius: 14px;
+  }
+  
+  .flag {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .language-name {
+    font-size: 1rem;
+  }
+  
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .progress-percentage {
+    font-size: 0.85rem;
+  }
+  
+  .level-badge {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
 
 .interests {
   display: grid;
