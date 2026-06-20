@@ -3,64 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amimer Abderrahmane CV</title>
+    <title>Amimer Abderrahmane — Big Data & MLOps</title>
     <link rel="icon" href="assets/machine-learning.png" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-animation">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+    <div class="bg-animation"></div>
     <div class="grid-overlay"></div>
 
     <header>
         <nav>
             <ul id="nav-buttons">
-                <li>
-                    <button data-target="resume" class="navbutton">
-                        <i class="fas fa-user icon"></i>
-                        <span>About</span>
-                    </button>
-                </li>
-                <li>
-                    <button data-target="experience" class="navbutton">
-                        <i class="fas fa-briefcase icon"></i>
-                        <span>Experience</span>
-                    </button>
-                </li>
-                <li>
-                    <button data-target="formation" class="navbutton">
-                        <i class="fas fa-graduation-cap icon"></i>
-                        <span>Education</span>
-                    </button>
-                </li>
-                <li>
-                    <button data-target="competence" class="navbutton">
-                        <i class="fas fa-cogs icon"></i>
-                        <span>Skills</span>
-                    </button>
-                </li>
-                <li>
-                    <button data-target="langues" class="navbutton">
-                        <i class="fas fa-globe icon"></i>
-                        <span>Languages</span>
-                    </button>
-                </li>
-                <li>
-                    <button data-target="interet" class="navbutton">
-                        <i class="fas fa-heart icon"></i>
-                        <span>Interests</span>
-                    </button>
-                </li>
+                <li><button data-target="resume" class="navbutton"><i class="fas fa-user icon"></i><span>About</span></button></li>
+                <li><button data-target="interet" class="navbutton"><i class="fas fa-layer-group icon"></i><span>Focus</span></button></li>
+                <li><button data-target="experience" class="navbutton"><i class="fas fa-briefcase icon"></i><span>Projects</span></button></li>
+                <li><button data-target="formation" class="navbutton"><i class="fas fa-graduation-cap icon"></i><span>Education</span></button></li>
+                <li><button data-target="competence" class="navbutton"><i class="fas fa-cogs icon"></i><span>Skills</span></button></li>
+                <li><button data-target="langues" class="navbutton"><i class="fas fa-globe icon"></i><span>Languages</span></button></li>
             </ul>
         </nav>
     </header>
@@ -68,561 +31,493 @@
     <main>
         <section id="welcome" class="section">
             <div class="welcome-container">
-                <h1 class="hero-text">Hello, I'm Amimer Abderrahmane</h1>
-                <h2 class="subtitle">Data Science Student & Backend Developer</h2>
-                <p class="description">Explore my projects and technical expertise</p>
-                <p class="description">Discover my professional journey</p>
-                <p class="description">Learn more about my work and passions</p>
+                <div class="hero-eyebrow">Algiers, DZ — Available for opportunities</div>
+                <h1 class="hero-text">Amimer<br>Abderrahmane<span class="accent">.</span></h1>
+                <h2 class="subtitle">Big Data Analytics · MLOps · Backend Engineering</h2>
+                <p class="description">I build the infrastructure between raw data and decisions that hold up in production — pipelines, models, and the dashboards people actually trust.</p>
+                <p class="description">Currently shipping an end-to-end MLOps platform and a real-time streaming pipeline. Open to new-grad roles in data and ML engineering.</p>
+
+                <div class="activity-strip">
+                    <div class="activity-label">// commit activity — last 12 weeks</div>
+                    <div class="heatmap-grid" id="heatmap"></div>
+                </div>
 
                 <div class="cta-section">
                     <a href="#resume" class="cta-button">
-                        <span>Get to know me</span>
+                        <span>cd ./about-me</span>
                         <i class="fas fa-arrow-down"></i>
                     </a>
                 </div>
             </div>
-
-            <div class="floating-element">
-                <i class="fas fa-code" style="font-size: 60px;"></i>
-            </div>
-            <div class="floating-element">
-                <i class="fas fa-database" style="font-size: 40px;"></i>
-            </div>
         </section>
 
         <section id="resume" class="section">
-            <h1 class="sectionTitle">About Me</h1>
+            <h1 class="sectionTitle">About <span class="tag">// 01</span></h1>
             <div class="resumeContainer">
                 <div class="photoContainer">
                     <img src="assets/photo_cv.jpg" alt="Amimer Abderrahmane Photo" class="profilePhoto">
                 </div>
                 <div class="resumeInfo">
                     <h2 class="name">Amimer Abderrahmane Mohamed</h2>
-                    <h3 class="aboutTitle">About Me</h3>
+                    <h3 class="aboutTitle">Big Data Analytics, freshly graduated</h3>
                     <p class="aboutText">
-                        I am a computer science student pursuing a <span style="color: #4f86a4; font-weight: 600;">Master's degree in Big Data Analytics</span> at Houari Boumediene University of Science and Technology.
-                        Alongside my studies, I have worked on several <span style="color: #4f86a4; font-weight: 600;">data science projects</span> as part of my learning journey, and I am seeking professional opportunities to gain experience in this domain.
-                        I am also a <span style="color: #4f86a4; font-weight: 600;">backend developer</span> with freelance and web development experience, eager to grow further in data-driven environments.
+                        I recently graduated with a <span class="hl">Master's in Big Data Analytics</span> from Houari Boumediene University of Science and Technology, and I'm now looking for my first real-world role in data and ML engineering.
+                        Before that, I spent time as a <span class="hl-cyan">backend and mobile developer</span>, building Django and Flutter applications for real clients — which is where I picked up the engineering habits I now bring to data work: thinking about reliability, deployment, and how a system behaves once it leaves the notebook.
+                        My recent projects lean into <span class="hl">MLOps</span>, <span class="hl">real-time streaming pipelines</span>, and <span class="hl-cyan">geospatial data engineering</span>, and that's the direction I want to keep building in.
                     </p>
+                    <div class="status-row">
+                        <div class="status-pill"><span class="dot"></span> M.Sc. Big Data Analytics</div>
+                        <div class="status-pill"><span class="dot"></span> Ex-backend & mobile dev</div>
+                        <div class="status-pill"><span class="dot"></span> Seeking first role</div>
+                    </div>
                 </div>
             </div>
-        </section>
-
-<section id="experience" class="section"> 
-  <h1 class="sectionTitle">Experience</h1> 
-  <p style="color: #fff;">Some projects I have worked on:</p> 
-
-  <div class="projects"> 
-
-    <!-- Project 1 -->
-    <div class="project"> 
-      <div class="societeName">SPA Sonelgaz-Engineering</div> 
-      <div class="projectTitle">Web and Mobile Application for Project Management and Decision Support</div> 
-      <button class="voirDetailsbtn">View details...</button> 
-      <div class="projectDetails"> 
-        This project involved the design and implementation of a project management and decision-support system that includes:
-        <ul> 
-          <li>Management of projects, tasks, human and material resources, employees, incidents, and notifications</li> 
-          <li>An authentication system ensuring each employee or project manager has role-specific features</li> 
-          <li>A task and project progress calculation method</li> 
-          <li>A dashboard displaying the state of projects, tasks, and overall progress</li> 
-          <li>A mobile application allowing employees to easily access necessary information and send updates</li> 
-          <li><b>Technologies Used</b>: 
-            <ul> 
-              <span style="font-family: 'Poppins', sans-serif ;font-weight: 500;"> 
-                <li>Django</li> 
-                <li>Flutter</li> 
-                <li>REST API</li> 
-              </span> 
-            </ul> 
-          </li> 
-          <li style="font-style: italic;color: gray; font-size: 1.2rem;"><b style="text-decoration: underline; color: #fff;">Github link </b>: Private</li>
-        </ul> 
-      </div> 
-    </div> 
-
-    <!-- Project 2 -->
-    <div class="project"> 
-      <div class="societeName">Warine Brand</div> 
-      <div class="projectTitle">E-commerce Web Application with Flutter Web & Firebase</div> 
-      <button class="voirDetailsbtn">View details...</button> 
-      <div class="projectDetails"> 
-        Warine Brand is a modern web application built with Flutter Web and powered by Firebase for backend services.
-        <ul>
-          <li><b>Features</b>: Client shopping interface, cart, orders, real-time availability, admin dashboard</li>
-          <li><b>Technologies Used</b>: 
-            <ul>
-              <span style="font-family: 'Poppins', sans-serif ;font-weight: 500;"> 
-                <li>Flutter Web</li>
-                <li>Firebase (Cloud Firestore, Authentication, Hosting)</li>
-              </span>
-            </ul>
-          </li>
-          <li style="font-style: italic; font-size: 1.2rem;"><b style="text-decoration: underline; color: #fff;">Github link </b> : <a href="https://github.com/Amimer12/Warine_Brand_web_app">View Repository</a> </li>
-        </ul>
-      </div> 
-    </div> 
-
-    <!-- Project 3 -->
-    <div class="project"> 
-      <div class="societeName">Medical Records Encryption</div> 
-      <div class="projectTitle">Data Encryption in a Distributed Database</div> 
-      <button class="voirDetailsbtn">View details...</button> 
-      <div class="projectDetails"> 
-        A project for building an encryption system for a MongoDB big data database used in a medical records management application.
-        <ul>
-          <li><b>Technologies Used</b>: 
-            <ul>
-              <span style="font-family: 'Poppins', sans-serif ;font-weight: 500;"> 
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>React.js</li>
-                <li>MongoDB</li>
-                <li>Crypto libraries</li>
-              </span>
-            </ul>
-          </li>
-          <li style="font-style: italic; font-size: 1.2rem;"><b style="text-decoration: underline; color: #fff;">Github link </b> : <a href="https://github.com/Amimer12/Data-encryption-system-in-a-distributed-database">View Repository</a></li>
-        </ul>
-      </div> 
-    </div> 
-
-    <!-- Project 4 -->
-    <div class="project"> 
-      <div class="societeName">M-Boutique</div> 
-      <div class="projectTitle">Stock & Account Management with Excel Integration</div> 
-      <button class="voirDetailsbtn">View details...</button> 
-      <div class="projectDetails"> 
-        Django-based inventory management system with a Jazzmin-enhanced admin panel.
-        <ul>
-          <li>Manage stock, accounts, and transactions</li>
-          <li>Export & synchronize data with Excel sheets</li>
-          <li>Deployed using Render (hosting) and Neon (PostgreSQL)</li>
-          <li><b>Technologies Used</b>:
-            <ul>
-              <span style="font-family: 'Poppins', sans-serif ;font-weight: 500;"> 
-                <li>Django</li>
-                <li>Jazzmin (custom admin interface)</li>
-                <li>PostgreSQL</li>
-                <li>Pandas</li>
-                <li>OpenPyXL</li>
-              </span>
-            </ul>
-          </li>
-          <li style="font-style: italic; font-size: 1.2rem;"><b style="text-decoration: underline; color: #fff;">Github link </b> : <a href="https://github.com/Amimer12/Stock-managment-web-app">View Repository</a></li>
-        </ul>
-      </div> 
-    </div> 
-
-    <!-- Project 5 -->
-    <div class="project"> 
-      <div class="societeName">Credit Card Fraud Detection System</div> 
-      <div class="projectTitle">Machine Learning for Real-Time Fraud Detection</div> 
-      <button class="voirDetailsbtn">View details...</button> 
-      <div class="projectDetails"> 
-        A real-time fraud detection system built with ensemble ML models using kaggle datasets, deployed as a Flask web application.
-        <ul>
-          <li><b>Models</b>: XGBoost, Random Forest, Ensemble with weighted probabilities</li>
-          <li><b>Technologies Used</b>: 
-            <ul>
-              <span style="font-family: 'Poppins', sans-serif ;font-weight: 500;"> 
-                <li>Python</li>
-                <li>Flask</li>
-                <li>XGBoost</li>
-                <li>Random Forest</li>
-                <li>Scikit-learn</li>
-                <li>Pandas</li>
-              </span>
-            </ul>
-          </li>
-          <li style="font-style: italic; font-size: 1.2rem;"><b style="text-decoration: underline; color: #fff;">Github link </b> : <a href="https://github.com/Amimer12/Credit-Card-Fraud-Detection-system">View Repository</a></li>
-        </ul>
-      </div> 
-    </div> 
-
-    <!-- Project 6 -->
-    <div class="project"> 
-      <div class="societeName">Data Science Assistant</div> 
-      <div class="projectTitle">Fine-Tuned GPT-Neo LLM for Data Science Q&A</div> 
-      <button class="voirDetailsbtn">View details...</button> 
-      <div class="projectDetails"> 
-        A simple assistant powered by GPT-Neo fine-tuned on Data Science Q&A, wrapped in a Flask web app.
-        <ul>
-          <li>Supports ranking algorithms, regression, deep learning, reinforcement learning, ETL pipelines</li>
-          <li><b>Technologies Used</b>: 
-            <ul>
-              <span style="font-family: 'Poppins', sans-serif ;font-weight: 500;"> 
-                <li>GPT-Neo (EleutherAI, 125M)</li>
-                <li>Hugging Face Transformers</li>
-                <li>Flask</li>
-                <li>Python</li>
-              </span>
-            </ul>
-          </li>
-          <li style="font-style: italic; color: gray; font-size: 1.2rem;"><b style="text-decoration: underline; color: #fff;">Github link </b>: (Still needs work and development) <a href="https://github.com/Amimer12/LLM_Training_For_Data_Science_Assistance">View Repository</a></li>
-        </ul>
-      </div> 
-    </div> 
-
-  </div> 
-</section>
-
-
-
-
-
-          <section id="formation" class="section"> 
-            <h1 class="sectionTitle">Certificates & Training</h1> 
-            
-            <ul class="formations"> 
-              <li>   
-                <i class="fa-solid fa-graduation-cap"></i> Bachelor's Degree in Information Systems Engineering and Software 
-              </li> 
-              <li> 
-                <i class="fa-solid fa-graduation-cap"></i> Practical Internship at SPA Sonelgaz-Engineering (Web Development Department) 
-              </li> 
-              <li> 
-                <i class="fa-solid fa-graduation-cap" ></i> Cybersecurity Training by Dr. Abderrazak Bachir Bouiadjra 
-              </li> 
-            </ul> 
-
-            <h2 class="sectionTitle">Other Trainings</h2>
-            <ul class="formations">
-              <li>
-                <i class="fa-solid fa-certificate"></i> Accelerating End-to-End Data Science Workflows – NVIDIA
-              </li>
-              <li>
-                <i class="fa-solid fa-certificate"></i> Building LLM Applications With Prompt Engineering – NVIDIA
-              </li>
-            </ul>
-          </section>
-
-        <section id="competence" class="section">
-            <h1 class="sectionTitle">Skills</h1>
-            <div class="competenceContainer">
-                <div class="competenceList">
-                    <div class="competenceTitre">Conceptual Skills</div>
-                    <ul>
-                        <li>
-                            Backend development & software architecture <span class="softPrcnt first">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Project planning <span class="softPrcnt">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Soft skills <span class="softPrcnt">(95%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 95%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Data engineering & structuring <span class="softPrcnt">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Machine Learning <span class="softPrcnt">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Data Analysis <span class="softPrcnt">(85%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 85%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Data Warehousing <span class="softPrcnt">(85%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 85%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            MLOps <span class="softPrcnt">(80%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 80%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Business Intelligence <span class="softPrcnt">(80%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 80%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Automation <span class="softPrcnt">(88%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 88%;"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="competenceList">
-                    <div class="competenceTitre">Technical Skills</div>
-                    <ul>
-                        <li>
-                            Python <span class="softPrcnt">(95%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 95%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Django <span class="softPrcnt">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Node.js & React.js <span class="softPrcnt">(85%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 85%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Oracle <span class="softPrcnt">(95%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 95%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            MySQL <span class="softPrcnt">(95%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 95%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            MongoDB <span class="softPrcnt">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Docker <span class="softPrcnt">(80%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 80%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Pandas / NumPy <span class="softPrcnt">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            Scikit-learn / TensorFlow <span class="softPrcnt">(85%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 85%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            N8N <span class="softPrcnt">(90%)</span>
-                            <div class="skillBar">
-                                <div class="skillLevel" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".skillLevel").forEach((bar) => {
-    const width = parseInt(bar.style.width); 
-    if (width >= 90) {
-      bar.classList.add("high");
-    }
-  });
-});
-</script>
-
-        <section id="langues" class="section">
-        <h1 class="sectionTitle">Languages</h1>
-        <div class="languagesContainer">
-            
-            <!-- Arabic -->
-            <div class="languageCard" data-percent="95" data-color="#27ae60">
-            <div class="flag-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="Arabic Flag" class="flag">
-            </div>
-            <h2 class="language-name">Arabic</h2>
-            <div class="progress-circle">
-                <svg viewBox="0 0 120 120">
-                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
-                <circle class="progress-fill" cx="60" cy="60" r="54"></circle>
-                </svg>
-                <div class="progress-percentage">95%</div>
-            </div>
-            <span class="level-badge native">Native</span>
-            </div>
-
-            <!-- English -->
-            <div class="languageCard" data-percent="90" data-color="#2980b9">
-            <div class="flag-container">
-                <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English Flag" class="flag">
-            </div>
-            <h2 class="language-name">English</h2>
-            <div class="progress-circle">
-                <svg viewBox="0 0 120 120">
-                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
-                <circle class="progress-fill" cx="60" cy="60" r="54"></circle>
-                </svg>
-                <div class="progress-percentage">90%</div>
-            </div>
-            <span class="level-badge fluent">Fluent</span>
-            </div>
-
-            <!-- French -->
-            <div class="languageCard" data-percent="80" data-color="#e67e22">
-            <div class="flag-container">
-                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="French Flag" class="flag">
-            </div>
-            <h2 class="language-name">French</h2>
-            <div class="progress-circle">
-                <svg viewBox="0 0 120 120">
-                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
-                <circle class="progress-fill" cx="60" cy="60" r="54"></circle>
-                </svg>
-                <div class="progress-percentage">80%</div>
-            </div>
-            <span class="level-badge intermediate">Intermediate+</span>
-            </div>
-
-        </div>
         </section>
 
         <section id="interet" class="section">
-        <h1 class="sectionTitle">Interests</h1>
-        <div class="interests">
-            <div class="interestCard" onclick="toggleInterest(this)">
-            <img src="assets/analysis.png" alt="Data Analysis" class="interestImage">
-            <h3>Data Analysis</h3>
-            <p class="interestText">Data analysis is essential for turning raw information into actionable insights. It helps businesses, governments, and organizations make smarter, evidence-based decisions that shape the future.</p>
+            <h1 class="sectionTitle">Focus areas <span class="tag">// 02</span></h1>
+            <p class="sectionIntro">What I'm learning, building with, and going deep on right now.</p>
+            <div class="interests">
+
+                <div class="interestCard featured" onclick="toggleInterest(this)">
+                    <div class="interestIconRow">
+                        <i class="fas fa-shield-halved"></i>
+                        <span class="interest-eyebrow">Active learning</span>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p class="interestText">Working through offensive security fundamentals — binary exploitation, web vulnerabilities, and system internals — to understand how the infrastructure I build can fail and be attacked.</p>
+                    <div class="platform-tags">
+                        <span class="platform-tag">pwn.college</span>
+                        <span class="platform-tag">TryHackMe</span>
+                    </div>
+                </div>
+
+                <div class="interestCard featured" onclick="toggleInterest(this)">
+                    <div class="interestIconRow">
+                        <i class="fas fa-earth-africa"></i>
+                        <span class="interest-eyebrow">Specialization</span>
+                    </div>
+                    <h3>Geospatial Databases</h3>
+                    <p class="interestText">Spatial indexing, GeoJSON, and querying location-aware datasets in MongoDB and PostGIS-style systems. I find the intersection of GIS and NoSQL especially interesting for urban and infrastructure data — see the waste collection analysis project below.</p>
+                </div>
+
+                <div class="interestCard" onclick="toggleInterest(this)">
+                    <div class="interestIconRow"><i class="fas fa-diagram-project"></i></div>
+                    <h3>MLOps</h3>
+                    <p class="interestText">Model versioning, automated retraining, and the gap between a model that scores well offline and one that's safe to ship. MLflow and CI/CD for ML pipelines.</p>
+                </div>
+
+                <div class="interestCard" onclick="toggleInterest(this)">
+                    <div class="interestIconRow"><i class="fas fa-magnifying-glass-chart"></i></div>
+                    <h3>Data Mining</h3>
+                    <p class="interestText">Finding structure in messy, large-scale datasets — pattern extraction and feature engineering that actually moves a downstream model.</p>
+                </div>
+
+                <div class="interestCard" onclick="toggleInterest(this)">
+                    <div class="interestIconRow"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
+                    <p class="interestText">Gradient-boosted trees and classical ML for tabular, real-world data — where most production fraud and forecasting problems actually live.</p>
+                </div>
+
+                <div class="interestCard" onclick="toggleInterest(this)">
+                    <div class="interestIconRow"><i class="fas fa-server"></i></div>
+                    <h3>Data Engineering</h3>
+                    <p class="interestText">ETL pipelines, streaming ingestion, and the unglamorous plumbing that makes everything downstream possible.</p>
+                </div>
+
             </div>
-            <div class="interestCard" onclick="toggleInterest(this)">
-            <img src="assets/data-science.png" alt="Data Science" class="interestImage">
-            <h3>Data Science</h3>
-            <p class="interestText">Data science combines programming, statistics, and problem-solving to extract knowledge from data. It powers innovations in healthcare, finance, and technology, driving progress in nearly every sector.</p>
+        </section>
+
+        <section id="experience" class="section">
+            <h1 class="sectionTitle">Projects <span class="tag">// 03</span></h1>
+            <p class="lead">A selection of what I've built — from production-style MLOps platforms to streaming pipelines and geospatial analysis.</p>
+
+            <div class="projects">
+
+                <!-- Project 1: MLOps flagship -->
+                <div class="project flagship">
+                    <div class="project-header">
+                        <div class="project-meta-left">
+                            <div class="project-tags">
+                                <span class="project-tag type-mlops">MLOps</span>
+                                <span class="project-tag type-internship">+ Internship</span>
+                            </div>
+                            <div class="societeName">Bank Al Salam — Internship Project</div>
+                            <div class="projectTitle">End-to-End MLOps Platform for Bank Budget Prediction</div>
+                        </div>
+                        <div class="company-logo-slot">
+                            <img src="assets/bank-al-salam-logo.png" alt="Bank Al Salam logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-building-columns\'></i>'">
+                        </div>
+                    </div>
+                    <button class="voirDetailsbtn"><i class="fas fa-chevron-right"></i> View details</button>
+                    <div class="projectDetails">
+                        <div class="detail-block">
+                            <p>My biggest project to date, built during an internship with Bank Al Salam. It's a complete MLOps platform for budget prediction, covering the full lifecycle from raw data to a model running in production — not a notebook, an actual deployed system with a user interface on top.</p>
+                            <p>The platform lets a non-technical user upload raw financial data, which is automatically validated and pushed through an ETL pipeline. From there, model training kicks off automatically, results get evaluated against tracked baselines, and approved models move into production — all visualized through interactive dashboards built for both technical and business users to monitor performance over time.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">What it does</span>
+                            <ul>
+                                <li>Interactive dashboards for visualizing model performance, predictions, and data drift</li>
+                                <li>Raw data ingestion interface with automated ETL processing</li>
+                                <li>Automated model training and evaluation, fully tracked and reproducible</li>
+                                <li>Production deployment pipeline — from trained model to served endpoint</li>
+                                <li>LightGBM as the core forecasting model, chosen for speed and tabular performance</li>
+                                <li>Experiment tracking and model registry with MLflow</li>
+                                <li>FastAPI backend serving predictions and orchestrating the pipeline</li>
+                                <li>React frontend for the dashboards and data entry interface</li>
+                                <li>Containerized with Docker, orchestrated with Kubernetes for scalable deployment</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">LightGBM</span>
+                                <span class="tech-pill">MLflow</span>
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">Docker</span>
+                                <span class="tech-pill">Kubernetes</span>
+                                <span class="tech-pill">Python</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Amimer12/MLOps-bank-budget-prediction" target="_blank" class="repo-link"><i class="fab fa-github"></i> View repository</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Sonelgaz internship -->
+                <div class="project flagship">
+                    <div class="project-header">
+                        <div class="project-meta-left">
+                            <div class="project-tags">
+                                <span class="project-tag type-internship">+ Internship</span>
+                            </div>
+                            <div class="societeName">SPA Sonelgaz-Engineering — Internship Project</div>
+                            <div class="projectTitle">Project Management & Decision Support Platform</div>
+                        </div>
+                        <div class="company-logo-slot">
+                            <img src="assets/sonelgaz-logo.png" alt="Sonelgaz logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-bolt\'></i>'">
+                        </div>
+                    </div>
+                    <button class="voirDetailsbtn"><i class="fas fa-chevron-right"></i> View details</button>
+                    <div class="projectDetails">
+                        <div class="detail-block">
+                            <p>Built during my internship with SPA Sonelgaz-Engineering's web development department: a full project management and decision-support system used to track projects, tasks, and resources across teams, with a mobile companion app for field employees.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">What it does</span>
+                            <ul>
+                                <li>Manages projects, tasks, human and material resources, employees, incidents, and notifications</li>
+                                <li>Role-based authentication so each employee or project manager sees features specific to their role</li>
+                                <li>Automatic task and project progress calculation</li>
+                                <li>A dashboard surfacing the live state of every project, task, and overall progress</li>
+                                <li>A mobile app letting employees access information and send updates from the field</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Django</span>
+                                <span class="tech-pill">Flutter</span>
+                                <span class="tech-pill">REST API</span>
+                            </div>
+                        </div>
+                        <span class="repo-link private"><i class="fas fa-lock"></i> Private repository</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Kafka streaming pipeline -->
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-meta-left">
+                            <div class="project-tags">
+                                <span class="project-tag">Streaming</span>
+                                <span class="project-tag">Big Data</span>
+                            </div>
+                            <div class="societeName">Personal / Academic Project</div>
+                            <div class="projectTitle">Real-Time Taxi Data Pipeline — Kafka, MongoDB & Cassandra</div>
+                        </div>
+                        <div class="company-logo-slot"><i class="fas fa-stream"></i></div>
+                    </div>
+                    <button class="voirDetailsbtn"><i class="fas fa-chevron-right"></i> View details</button>
+                    <div class="projectDetails">
+                        <div class="detail-block">
+                            <p>A real-time Big Data pipeline that streams and processes data from New York City's taxi service. The goal was twofold: build a working streaming architecture with Kafka, and directly compare two distributed NoSQL databases — MongoDB and Cassandra — as consumers of the same stream.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">What it does</span>
+                            <ul>
+                                <li>Kafka brokers handle the streaming layer, with a dedicated producer replaying NYC taxi trip data</li>
+                                <li>Two parallel consumers write the same stream into MongoDB (sharded cluster) and Cassandra (multiple replication factors), so throughput and query behavior can be compared directly</li>
+                                <li>Fully containerized with Docker Compose, with separate compose stacks for brokers, Mongo shards, and Cassandra nodes</li>
+                                <li>Includes a web app layer for inspecting and visualizing the ingested data</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Kafka</span>
+                                <span class="tech-pill">MongoDB</span>
+                                <span class="tech-pill">Cassandra</span>
+                                <span class="tech-pill">Docker Compose</span>
+                                <span class="tech-pill">Python</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/943mohamedzouaoui2131tg/kafka-pipeline-streaming" target="_blank" class="repo-link"><i class="fab fa-github"></i> View repository</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Geospatial waste collection -->
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-meta-left">
+                            <div class="project-tags">
+                                <span class="project-tag type-geo">Geospatial</span>
+                            </div>
+                            <div class="societeName">Academic Project — GIS</div>
+                            <div class="projectTitle">Waste Collection Points Analysis — MongoDB & ArcGIS</div>
+                        </div>
+                        <div class="company-logo-slot"><i class="fas fa-map-location-dot"></i></div>
+                    </div>
+                    <button class="voirDetailsbtn"><i class="fas fa-chevron-right"></i> View details</button>
+                    <div class="projectDetails">
+                        <div class="detail-block">
+                            <p>A geospatial data engineering project analyzing the spatial distribution of urban waste collection points. Shapefiles from real-world urban routing and zone boundaries are converted into JSON and loaded into MongoDB, enabling geospatial queries that identify underserved zones based on collection point density.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">What it does</span>
+                            <ul>
+                                <li>Integrates shapefiles with MongoDB for geospatial querying over real urban zone data</li>
+                                <li>Identifies underserved areas by analyzing collection point density across zones</li>
+                                <li>Express backend API with database seeding from real GIS data</li>
+                                <li>Map-based visualization layer for exploring the results</li>
+                                <li>Vite-powered frontend for fast iteration during development</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">MongoDB</span>
+                                <span class="tech-pill">Express.js</span>
+                                <span class="tech-pill">ArcGIS</span>
+                                <span class="tech-pill">Leaflet</span>
+                                <span class="tech-pill">Vite</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/ShunIV/sig-project" target="_blank" class="repo-link"><i class="fab fa-github"></i> View repository</a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Stock management -->
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-meta-left">
+                            <div class="project-tags">
+                                <span class="project-tag">Backend</span>
+                            </div>
+                            <div class="societeName">M-Boutique</div>
+                            <div class="projectTitle">Stock & Account Management with Excel Integration</div>
+                        </div>
+                        <div class="company-logo-slot"><i class="fas fa-boxes-stacked"></i></div>
+                    </div>
+                    <button class="voirDetailsbtn"><i class="fas fa-chevron-right"></i> View details</button>
+                    <div class="projectDetails">
+                        <div class="detail-block">
+                            <p>A Django-based inventory management system with a customized Jazzmin admin panel, built to handle stock, accounts, and transactions for a small retail business — with two-way sync to the Excel sheets the business already relied on.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">What it does</span>
+                            <ul>
+                                <li>Manages stock, accounts, and transactions through a customized admin interface</li>
+                                <li>Exports and synchronizes data with Excel sheets via Pandas and OpenPyXL</li>
+                                <li>Deployed live using Render for hosting and Neon for managed PostgreSQL</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Django</span>
+                                <span class="tech-pill">Jazzmin</span>
+                                <span class="tech-pill">PostgreSQL</span>
+                                <span class="tech-pill">Pandas</span>
+                                <span class="tech-pill">OpenPyXL</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Amimer12/Stock-managment-web-app" target="_blank" class="repo-link"><i class="fab fa-github"></i> View repository</a>
+                    </div>
+                </div>
+
+                <!-- Project 6: Fraud detection -->
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-meta-left">
+                            <div class="project-tags">
+                                <span class="project-tag">Machine Learning</span>
+                            </div>
+                            <div class="societeName">Personal Project</div>
+                            <div class="projectTitle">Credit Card Fraud Detection — Real-Time ML</div>
+                        </div>
+                        <div class="company-logo-slot"><i class="fas fa-shield-halved"></i></div>
+                    </div>
+                    <button class="voirDetailsbtn"><i class="fas fa-chevron-right"></i> View details</button>
+                    <div class="projectDetails">
+                        <div class="detail-block">
+                            <p>A real-time fraud detection system trained on Kaggle transaction data, combining multiple models into a weighted ensemble and serving predictions through a Flask web application.</p>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">What it does</span>
+                            <ul>
+                                <li>Combines XGBoost and Random Forest into a weighted-probability ensemble for better recall on rare fraud cases</li>
+                                <li>Serves real-time predictions through a lightweight Flask interface</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Stack</span>
+                            <div class="tech-pills">
+                                <span class="tech-pill">XGBoost</span>
+                                <span class="tech-pill">Random Forest</span>
+                                <span class="tech-pill">Scikit-learn</span>
+                                <span class="tech-pill">Flask</span>
+                                <span class="tech-pill">Pandas</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Amimer12/Credit-Card-Fraud-Detection-system" target="_blank" class="repo-link"><i class="fab fa-github"></i> View repository</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="interestCard" onclick="toggleInterest(this)">
-            <img src="assets/data-mining.png" alt="Data Mining" class="interestImage">
-            <h3>Data Mining</h3>
-            <p class="interestText">Data mining reveals hidden patterns and relationships in large datasets. It enables better predictions, smarter recommendations, and optimized decision-making across industries.</p>
+        </section>
+
+        <section id="formation" class="section">
+            <h1 class="sectionTitle">Education <span class="tag">// 04</span></h1>
+            <ul class="formations">
+                <li><i class="fa-solid fa-graduation-cap"></i> M.Sc. Big Data Analytics — Houari Boumediene University of Science and Technology</li>
+                <li><i class="fa-solid fa-graduation-cap"></i> B.Sc. Information Systems Engineering and Software</li>
+                <li><i class="fa-solid fa-briefcase"></i> Internship — Bank Al Salam (MLOps platform)</li>
+                <li><i class="fa-solid fa-briefcase"></i> Internship — SPA Sonelgaz-Engineering (Web Development Department)</li>
+                <li><i class="fa-solid fa-shield-halved"></i> Cybersecurity Training — Dr. Abderrazak Bachir Bouiadjra</li>
+                <li><i class="fa-solid fa-certificate"></i> Accelerating End-to-End Data Science Workflows — NVIDIA</li>
+                <li><i class="fa-solid fa-certificate"></i> Building LLM Applications With Prompt Engineering — NVIDIA</li>
+            </ul>
+        </section>
+
+        <section id="competence" class="section">
+            <h1 class="sectionTitle">Skills <span class="tag">// 05</span></h1>
+            <div class="competenceContainer">
+                <div class="competenceList">
+                    <div class="competenceTitre">Data & ML Engineering</div>
+                    <ul>
+                        <li>MLOps & model deployment <span class="softPrcnt">(90%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 90%;"></div></div></li>
+                        <li>Machine learning (LightGBM, XGBoost, scikit-learn) <span class="softPrcnt">(90%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 90%;"></div></div></li>
+                        <li>ETL pipelines & data engineering <span class="softPrcnt">(90%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 90%;"></div></div></li>
+                        <li>Real-time streaming (Kafka) <span class="softPrcnt">(85%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 85%;"></div></div></li>
+                        <li>Geospatial data & GIS analysis <span class="softPrcnt">(80%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 80%;"></div></div></li>
+                        <li>Data mining & feature engineering <span class="softPrcnt">(85%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 85%;"></div></div></li>
+                        <li>Experiment tracking (MLflow) <span class="softPrcnt">(85%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 85%;"></div></div></li>
+                        <li>Business intelligence & dashboards <span class="softPrcnt">(80%)</span>
+                            <div class="skillBar"><div class="skillLevel" style="width: 80%;"></div></div></li>
+                    </ul>
+                </div>
+
+                <div class="competenceList">
+                    <div class="competenceTitre">Engineering & Tools</div>
+                    <ul>
+                        <li>Python <span class="softPrcnt">(95%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 95%;"></div></div></li>
+                        <li>Docker & Kubernetes <span class="softPrcnt">(85%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 85%;"></div></div></li>
+                        <li>FastAPI & Django <span class="softPrcnt">(90%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 90%;"></div></div></li>
+                        <li>React.js & Node.js <span class="softPrcnt">(85%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 85%;"></div></div></li>
+                        <li>MongoDB & Cassandra <span class="softPrcnt">(90%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 90%;"></div></div></li>
+                        <li>PostgreSQL & MySQL / Oracle <span class="softPrcnt">(90%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 90%;"></div></div></li>
+                        <li>Pandas / NumPy <span class="softPrcnt">(90%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 90%;"></div></div></li>
+                        <li>Cybersecurity fundamentals <span class="softPrcnt">(60%)</span>
+                            <div class="skillBar"><div class="skillLevel cyan" style="width: 60%;"></div></div></li>
+                    </ul>
+                </div>
             </div>
-            <div class="interestCard" onclick="toggleInterest(this)">
-            <img src="assets/machine-learning.png" alt="Machine Learning" class="interestImage">
-            <h3>Machine Learning</h3>
-            <p class="interestText">Machine learning allows systems to learn and improve from data without being explicitly programmed. It drives modern AI applications like recommendation systems, self-driving cars, and intelligent assistants.</p>
+        </section>
+
+        <section id="langues" class="section">
+            <h1 class="sectionTitle">Languages <span class="tag">// 06</span></h1>
+            <div class="languagesContainer">
+                <div class="languageCard" data-percent="95" data-color="#d9a441">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="Arabic Flag" class="flag">
+                    <h2 class="language-name">Arabic</h2>
+                    <div class="progress-circle">
+                        <svg viewBox="0 0 120 120"><circle class="progress-bg" cx="60" cy="60" r="54"></circle><circle class="progress-fill" cx="60" cy="60" r="54"></circle></svg>
+                        <div class="progress-percentage">95%</div>
+                    </div>
+                    <span class="level-badge native">Native</span>
+                </div>
+
+                <div class="languageCard" data-percent="90" data-color="#4fd1c5">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English Flag" class="flag">
+                    <h2 class="language-name">English</h2>
+                    <div class="progress-circle">
+                        <svg viewBox="0 0 120 120"><circle class="progress-bg" cx="60" cy="60" r="54"></circle><circle class="progress-fill" cx="60" cy="60" r="54"></circle></svg>
+                        <div class="progress-percentage">90%</div>
+                    </div>
+                    <span class="level-badge fluent">Fluent</span>
+                </div>
+
+                <div class="languageCard" data-percent="80" data-color="#8b94a3">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="French Flag" class="flag">
+                    <h2 class="language-name">French</h2>
+                    <div class="progress-circle">
+                        <svg viewBox="0 0 120 120"><circle class="progress-bg" cx="60" cy="60" r="54"></circle><circle class="progress-fill" cx="60" cy="60" r="54"></circle></svg>
+                        <div class="progress-percentage">80%</div>
+                    </div>
+                    <span class="level-badge intermediate">Intermediate+</span>
+                </div>
             </div>
-            <div class="interestCard" onclick="toggleInterest(this)">
-            <img src="assets/project-management.png" alt="Project Management" class="interestImage">
-            <h3>Project Management</h3>
-            <p class="interestText">Project management ensures that complex tasks are organized, coordinated, and delivered on time. It is key to achieving success in today’s fast-paced and competitive world.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="content_footer">
+                <div class="profil">
+                    <div class="logo_area">
+                        <span class="name">Amimer Abderrahmane Mohamed</span>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.linkedin.com/in/amimer-abderrahmane-9bb196383/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/213559630016" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/abdou1am1/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Amimer12" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="service_area">
+                    <ul class="service_header">
+                        <li class="service_name">Focus areas</li>
+                        <li><a href="#interet">MLOps & deployment</a></li>
+                        <li><a href="#interet">Real-time data pipelines</a></li>
+                        <li><a href="#interet">Geospatial databases</a></li>
+                        <li><a href="#interet">Machine learning</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="interestCard" onclick="toggleInterest(this)">
-            <img src="assets/hack.png" alt="Cybersecurity" class="interestImage">
-            <h3>Cybersecurity</h3>
-            <p class="interestText">As digital threats grow, cybersecurity is critical for protecting data, systems, and infrastructures. It safeguards privacy and trust in an increasingly connected society.</p>
+            <hr>
+            <div class="footer_bottom">
+                <div class="copy_right"><i class="fas fa-copyright"></i> <span>2026 Amimer Abderrahmane</span></div>
             </div>
         </div>
-</section>
+    </footer>
 
-<script>
-document.querySelectorAll(".languageCard").forEach(card => {
-  const percent = card.dataset.percent;
-  const color = card.dataset.color;
-  const circle = card.querySelector(".progress-fill");
-  const radius = 54;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (percent / 100) * circumference;
-
-  circle.style.stroke = color;
-  circle.style.strokeDasharray = circumference;
-  setTimeout(() => {
-    circle.style.strokeDashoffset = offset;
-  }, 300);
-});
-</script>
-
-
-<section id="divers" class="section">
-  <h1 class="sectionTitle">Divers</h1>
-  <h2>Some Interesting YouTube Channels</h2>
-  <div class="youtubeChannels">
-    
-    <div class="channelCard">
-      <img src="https://www.google.com/s2/favicons?sz=128&domain_url=https://www.youtube.com/@3blue1brown" alt="3Blue1Brown" class="channelLogo">
-      <h3>3Blue1Brown</h3>
-      <p>Mathematics explained with stunning visualizations.</p>
-      <a href="https://www.youtube.com/@3blue1brown" target="_blank" class="channelBtn">Visit Channel</a>
-    </div>
-
-    <div class="channelCard">
-      <img src="https://www.google.com/s2/favicons?sz=128&domain_url=https://www.youtube.com/@Fireship" alt="Fireship" class="channelLogo">
-      <h3>Fireship</h3>
-      <p>High-energy web dev & programming tutorials in 100 seconds.</p>
-      <a href="https://www.youtube.com/@Fireship" target="_blank" class="channelBtn">Visit Channel</a>
-    </div>
-
-    <div class="channelCard">
-      <img src="https://www.google.com/s2/favicons?sz=128&domain_url=https://www.youtube.com/@TwoMinutePapers" alt="Two Minute Papers" class="channelLogo">
-      <h3>Two Minute Papers</h3>
-      <p>Latest AI and computer science research explained simply.</p>
-      <a href="https://www.youtube.com/@TwoMinutePapers" target="_blank" class="channelBtn">Visit Channel</a>
-    </div>
-
-  </div>
-</section>
-
-
-</main> 
-<footer> 
-  <div class="container"> 
-    <div class="content_footer"> 
-      <div class="profil"> 
-        <div class="logo_area"> 
-          <span class="name">Amimer Abderrahmane Mohamed</span> 
-          <button id="dark-mode" class="moon show">
-            <i class="bx bxs-moon"></i>
-          </button> 
-        </div> 
-        <div class="desc_area"> </div> 
-        <div class="social_media"> 
-          <a href="https://www.linkedin.com/in/amimer-abderrahmane-9bb196383/"><i class="fab fa-linkedin"></i></a> 
-          <a href="https://wa.me/213559630016"><i class="fab fa-whatsapp"></i></a> 
-          <a href="https://www.instagram.com/abdou1am1/"><i class="fab fa-instagram"></i></a> 
-          <a href="https://github.com/Amimer12"><i class="fab fa-github"></i></a> 
-        </div> 
-      </div> 
-      <div class="service_area"> 
-        <ul class="service_header"> 
-          <li class="service_name">Services</li> 
-          <li><a href="#">Web Development</a></li> 
-          <li><a href="#">Machine Learning Model Design & Deployment</a></li> 
-          <li><a href="#">Database Architecture & Optimization</a></li> 
-          <li><a href="#">Data Analysis & Interactive Dashboard Development</a></li> 
-        </ul> 
-      </div> 
-    </div> 
-    <hr> 
-    <div class="footer_bottom"> 
-      <div class="copy_right"> 
-        <i class="fas fa-copyright"></i> <span>2023 Amimer Abderrahmane</span> 
-      </div> 
-      <div class="tou"> </div> 
-    </div> 
-  </div> 
-</footer>
-
-    
+    <script src="script.js"></script>
 </body>
-
 </html>
