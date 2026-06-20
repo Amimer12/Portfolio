@@ -190,36 +190,3 @@ document.addEventListener("DOMContentLoaded", () => {
         obs.observe(bar);
     });
 });
-
-// Git-style commit activity heatmap (signature hero element)
-document.addEventListener("DOMContentLoaded", () => {
-    const grid = document.getElementById("heatmap");
-    if (!grid) return;
-
-    const weeks = 12;
-    const days = 7;
-    const totalCells = weeks * days;
-
-    for (let i = 0; i < totalCells; i++) {
-        const cell = document.createElement("div");
-        cell.classList.add("heatmap-cell");
-
-        // Weighted random activity level, denser toward the most recent weeks
-        const weekIndex = Math.floor(i / days);
-        const recencyBoost = weekIndex / weeks;
-        const roll = Math.random() + recencyBoost * 0.35;
-
-        let level = 0;
-        if (roll > 1.05) level = 4;
-        else if (roll > 0.85) level = 3;
-        else if (roll > 0.6) level = 2;
-        else if (roll > 0.4) level = 1;
-
-        cell.setAttribute("data-level", level);
-        cell.style.opacity = "0";
-        cell.style.transition = "opacity 0.4s ease";
-        grid.appendChild(cell);
-
-        setTimeout(() => { cell.style.opacity = "1"; }, 10 * i);
-    }
-});

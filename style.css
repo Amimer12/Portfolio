@@ -261,24 +261,13 @@ main {
   margin-bottom: 10px;
 }
 
-.heatmap-grid {
-  display: grid;
-  grid-template-rows: repeat(7, 11px);
-  grid-auto-flow: column;
-  gap: 3px;
+.heatmap-img {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(0.92) saturate(1.05);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.015);
 }
-
-.heatmap-cell {
-  width: 11px;
-  height: 11px;
-  border-radius: 2px;
-  background: var(--line);
-}
-
-.heatmap-cell[data-level="1"] { background: rgba(217, 164, 65, 0.25); }
-.heatmap-cell[data-level="2"] { background: rgba(217, 164, 65, 0.5); }
-.heatmap-cell[data-level="3"] { background: rgba(217, 164, 65, 0.75); }
-.heatmap-cell[data-level="4"] { background: var(--signal-amber); box-shadow: 0 0 6px rgba(217, 164, 65, 0.5); }
 
 .cta-section {
   margin-top: 2.8rem;
@@ -471,6 +460,25 @@ main {
 }
 
 .interestCard.featured:hover { border-color: var(--signal-cyan); }
+
+.interestCard.learning {
+  border-style: dashed;
+  border-color: var(--signal-amber-dim);
+  background: linear-gradient(160deg, rgba(217, 164, 65, 0.05), var(--bg-panel) 60%);
+}
+
+.interestCard.learning:hover { border-color: var(--signal-amber); }
+
+.interestCard.learning .interestIconRow i { color: var(--signal-amber); }
+
+.learning-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--signal-amber);
+}
+
+.learning-tag i { font-size: 0.65rem; }
 
 .interestIconRow {
   display: flex;
@@ -787,6 +795,7 @@ main {
   font-size: 1.02rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
@@ -794,6 +803,29 @@ main {
   opacity: 0;
   transform: translateX(-40px);
   transition: transform 0.4s ease, opacity 0.8s ease, color 0.2s ease;
+}
+
+.verify-link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--signal-amber);
+  border: 1px solid var(--signal-amber-dim);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.verify-link i { font-size: 0.62rem; }
+
+.verify-link:hover {
+  border-color: var(--signal-amber);
+  background: rgba(217, 164, 65, 0.08);
 }
 
 .formations li.visible { opacity: 1; transform: translateX(0); }
