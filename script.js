@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll("nav ul li button");
-    const sections = document.querySelectorAll("section");
+    const sections = Array.from(document.querySelectorAll("section[id]")).filter(section =>
+        Array.from(buttons).some(btn => btn.getAttribute("data-target") === section.getAttribute("id"))
+    );
 
     // Smooth scrolling and active button management
     buttons.forEach(button => {
@@ -14,33 +16,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Scroll spy
-    window.addEventListener("scroll", () => {
-        let currentSection = "";
+    function setActiveButton(activeButton) {
+        buttons.forEach(button => button.classList.remove("active"));
+        if (activeButton) activeButton.classList.add("active");
+    }
+
+    // Scroll spy: pick whichever tracked section's center is closest to viewport center
+    function updateActiveSection() {
+        const viewportCenter = window.innerHeight / 2;
+        let closestSection = null;
+        let closestDistance = Infinity;
 
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
-            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                currentSection = section.getAttribute("id");
+            const sectionCenter = rect.top + rect.height / 2;
+            const distance = Math.abs(sectionCenter - viewportCenter);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestSection = section;
             }
         });
 
-        buttons.forEach(button => {
-            button.classList.remove("active");
-            if (button.getAttribute("data-target") === currentSection) {
-                setActiveButton(button);
-            }
-        });
-    });
-
-    function setActiveButton(activeButton) {
-        buttons.forEach(button => button.classList.remove("active"));
-        activeButton.classList.add("active");
+        if (!closestSection) return;
+        const currentId = closestSection.getAttribute("id");
+        const matchingButton = Array.from(buttons).find(
+            button => button.getAttribute("data-target") === currentId
+        );
+        setActiveButton(matchingButton);
     }
+
+    window.addEventListener("scroll", updateActiveSection);
+    window.addEventListener("resize", updateActiveSection);
+    updateActiveSection(); // run once on load so the icon is correct immediately
 
     // Auto-scroll to resume section after welcome animation
     setTimeout(() => {
         const resumeSection = document.getElementById("resume");
+        if (!resumeSection) return;
         const resumeRect = resumeSection.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
 
@@ -49,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 3200);
 });
+
 
 // Header subtle slide near footer
 document.addEventListener("DOMContentLoaded", () => {

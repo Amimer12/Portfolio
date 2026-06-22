@@ -334,6 +334,7 @@ main {
 }
 
 /* ---------- resume / about ---------- */
+.resumeCard-mobile { display: none; } /* shown only in mobile breakpoint */
 .resumeContainer {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -1078,18 +1079,358 @@ hr { height: 1px; border: none; background-color: var(--line); margin-bottom: 1r
   .footer_bottom { justify-content: center; }
 }
 
-/* ---------- responsive ---------- */
+/* ============================================================
+   MOBILE — comprehensive phone layout
+   Strategy: bottom tab bar, condensed cards, reduced density
+   ============================================================ */
+
 @media (max-width: 768px) {
+
+  /* ---------- hide sidebar, show nothing yet (bottom nav handles it) ---------- */
   header { display: none; }
-  main { margin-left: 0; }
-  .section { padding: 50px 22px; }
-  .resumeContainer { grid-template-columns: 1fr; text-align: left; gap: 2rem; }
-  .photoContainer { justify-content: flex-start; }
-  .project-header { flex-direction: column; }
-  .company-logo-slot { width: 48px; height: 48px; }
+  main { margin-left: 0; padding-bottom: 72px; } /* room for bottom tab bar */
+
+  /* ---------- bottom tab bar ---------- */
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 14, 20, 0.96);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid var(--line);
+    padding: 0;
+    height: 62px;
+  }
+
+  .mobile-nav button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    color: var(--ink-faint);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+  }
+
+  .mobile-nav button i {
+    font-size: 16px;
+  }
+
+  .mobile-nav button.active {
+    color: var(--signal-amber);
+  }
+
+  .mobile-nav button.active i {
+    filter: drop-shadow(0 0 6px rgba(217, 164, 65, 0.5));
+  }
+
+  /* ---------- general section ---------- */
+  .section {
+    padding: 44px 20px 36px;
+    min-height: auto;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sectionTitle .tag {
+    font-size: 0.72rem;
+  }
+
+  .sectionIntro {
+    font-size: 0.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  /* ---------- hero ---------- */
+  #welcome { min-height: 100svh; padding: 48px 20px 36px; }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text {
+    font-size: clamp(2.4rem, 12vw, 3.4rem);
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 0.5rem;
+  }
+
+  /* hide heatmap on mobile — too wide, reads as noise */
+  .activity-strip { display: none; }
+
+  .cta-section { margin-top: 1.8rem; }
+
+  .cta-button {
+    padding: 12px 22px;
+    font-size: 0.88rem;
+  }
+
+  /* ---------- about ---------- */
+  .resumeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  /* compact profile card header on mobile */
+  .resumeCard-mobile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 1.4rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .photoContainer { display: none; } /* replaced by inline mobile card */
+
+  .profilePhoto-mobile {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--line-bright);
+    filter: grayscale(40%);
+    flex-shrink: 0;
+  }
+
+  .resumeCard-mobile-text .name {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+
+  .resumeCard-mobile-text .aboutTitle {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+
+  .resumeInfo {
+    width: 100%;
+  }
+
+  /* hide the full name heading since mobile card shows it */
+  .resumeInfo > .name { display: none; }
+
+  .aboutText {
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .status-row {
+    gap: 8px;
+    margin-top: 1.2rem;
+  }
+
+  .status-pill {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+
+  /* ---------- interests ---------- */
+  .interests {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .interestCard {
+    padding: 16px;
+  }
+
+  .interestIconRow {
+    margin-bottom: 8px;
+  }
+
+  .interestIconRow i { font-size: 1.1rem; }
+
+  .interestCard h3 { font-size: 0.98rem; }
+
+  .interestText { font-size: 0.84rem; }
+
+  .platform-tags { gap: 6px; margin-top: 8px; }
+  .platform-tag { font-size: 0.65rem; padding: 3px 7px; }
+
+  /* ---------- projects ---------- */
+  .projects { gap: 14px; }
+
+  .project {
+    border-radius: 8px;
+  }
+
+  .project-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px 18px 0;
+  }
+
+  /* hide logo slot on mobile — saves space, not needed at small size */
+  .company-logo-slot { display: none; }
+
+  .project-tags { gap: 6px; margin-bottom: 8px; }
+  .project-tag { font-size: 0.62rem; padding: 3px 7px; }
+  .societeName { font-size: 0.74rem; margin-bottom: 4px; }
+  .projectTitle { font-size: 1.05rem; }
+
+  .voirDetailsbtn {
+    font-size: 0.78rem;
+    margin: 12px 18px 0 18px;
+    gap: 5px;
+  }
+
+  .projectDetails {
+    font-size: 0.84rem;
+  }
+
+  .project.expanded .projectDetails {
+    padding: 0 18px 18px 18px;
+  }
+
+  .tech-pills { gap: 6px; }
+  .tech-pill { font-size: 0.7rem; padding: 4px 9px; }
+
+  .repo-link {
+    font-size: 0.78rem;
+    padding: 7px 12px;
+  }
+
+  /* ---------- education ---------- */
+  .formations { margin-bottom: 2rem; }
+
+  .formations li {
+    font-size: 0.9rem;
+    padding: 12px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .formations li i { font-size: 0.85rem; width: 16px; }
+
+  .verify-link {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    margin-left: 0;
+  }
+
+  /* ---------- skills ---------- */
+  .competenceContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .competenceList {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .competenceTitre {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .competenceList ul li {
+    font-size: 0.84rem;
+    margin-bottom: 12px;
+  }
+
+  .softPrcnt { font-size: 0.75rem; }
+
+  /* ---------- languages ---------- */
+  .languagesContainer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .languageCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    text-align: left;
+    border-radius: 8px;
+  }
+
+  .flag {
+    width: 44px;
+    height: 33px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .progress-circle {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .progress-percentage { font-size: 0.72rem; }
+
+  .language-name {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .level-badge {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+    margin-top: 4px;
+  }
+
+  /* ---------- footer ---------- */
+  .container { padding: 24px 20px; }
+
+  .content_footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .service_area { display: none; } /* footer services overkill on mobile */
+
+  .social_media a { font-size: 20px; margin-right: 16px; }
+
+  footer { border-radius: 16px 16px 0 0; }
+
 }
 
-@media (max-width: 480px) {
-  .profilePhoto { width: 170px; height: 170px; }
-  .projectTitle { font-size: 1.15rem; }
+/* ---- extra small (SE, Galaxy A, etc.) ---- */
+@media (max-width: 380px) {
+  .hero-text { font-size: 2.1rem; }
+  .subtitle { font-size: 0.82rem; }
+  .description { font-size: 0.86rem; }
+  .mobile-nav button { font-size: 8px; }
+  .mobile-nav button i { font-size: 14px; }
+  .projectTitle { font-size: 0.96rem; }
 }
+
+/* show mobile nav only on mobile */
+.mobile-nav { display: none; }
